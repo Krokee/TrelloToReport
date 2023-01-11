@@ -13,7 +13,7 @@
     "url": "git+https://github.com/Krokee/TrelloToReport.git"
   },
   "author": "Romain Koenig",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Krokee/TrelloToReport/issues"
   },
