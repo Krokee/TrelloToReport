@@ -23,7 +23,13 @@ date: "2023"
   </header>
   <main>
 	<h1>{{title}}</h1>
-    {{ content }}
+	<ul>
+	{% for item in content %}
+  		<li>{{ item.name }}</li>
+	{% else %}
+  		<li>This would display if the 'item' collection were empty</li>
+	{% endfor %}
+</ul>
   </main>
   <footer>
     <p>Copyright {{ date }}</p>
