@@ -1,5 +1,5 @@
 ---
-title: "Here we start"
+title: "No.900 Weekly Report"
 date: "2023"
 ---
 
@@ -23,13 +23,22 @@ date: "2023"
   </header>
   <main>
 	<h1>{{title}}</h1>
-	<ul>
+	<ul class="cards-list">
 	{% for item in content %}
-  		<li>{{ item.name }}</li>
+  		<li class="card">
+			<h3>{{ item.name }}</h3>
+			<div class="card-details">
+				{% if item.descriptif %}
+					<p class="card-descriptif">Descriptif : {{ item.descriptif }}</p>
+				{% endif %}
+				<p class="card-comment">Dernier commentaire : {{ item.lastComment }}</p>
+			</div>
+		</li>
 	{% else %}
   		<li>This would display if the 'item' collection were empty</li>
 	{% endfor %}
 </ul>
+
   </main>
   <footer>
     <p>Copyright {{ date }}</p>
